@@ -1,0 +1,637 @@
+<!DOCTYPE html>  
+<html lang="en"> 
+  
+<head>  
+<meta charset="utf-8">  
+<meta http-equiv="X-UA-Compatible" content="IE=edge">  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<meta http-equiv="X-UA-Compatible" content="IE=edge">  
+<meta name="copyright" content="copyright (c) 2016 MijiTron" /> 
+<meta name="description" content="MijiTron is a portfolio website that demonstrates my experience with front-end web development and graphic design. My name is Michelle, I am the creator of this website and all of the projects showcased within. You can also view my blog, 'MijiTron's Life Marathon' which tracks my experiences throughout my coding journey towards becoming a full fledged developer." />
+<meta name="keywords" content="seattle, washington, undergraduate, marketing, front-end development, graphic design, web design, resume, portfolio" />
+<!--[if lt IE 9]>  
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+<![endif]-->  
+
+<!--bootstrap-->  
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!--latest compiled and minified javascript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/9578c16965.js"></script>
+
+<style type="text/css">
+/* Add padding between rows */
+.row-padding {
+padding: 1em 0;  
+}
+/* Remove the navbar's primary margin-bottom and rounded borders */ 
+.navbar {
+margin-bottom: 0;
+border-radius: 0;
+}
+/*Image sizing */
+img {
+width: 100%;
+object-fit: cover;
+}
+p {
+font-size: 1.25em;
+}
+date {
+font-size: 1.25em;
+font-style: italic;
+}
+/* Add a gray background color and some padding to the footer */
+footer {
+background-color: rgba(0,0,0,.85);
+color: rgba(255,255,255,.75);
+padding: 25px;
+}
+footer a {
+color: rgba(255,255,255,.75);
+}
+.h-divider{
+margin-top:5px;
+margin-bottom:5px;
+height:1px;
+width:100%;
+border-top:1px solid lightgray;
+}
+</style>
+</head> 
+  
+<body> 
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">mijitron</a>
+    </div>
+    <div class="navbar" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Expression Evaluation and Precedence</a></li>
+        <li><a href="loop.html">Loop Tables</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+  <div class="container">  
+    <div class="row">
+    <div class="row-padding"></div>
+      <div class="col-sm-6"> 
+        <!--panel-->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h1>Compound Conditions</h1>
+          </div>
+          <div class="panel-body">
+            <p>Comparisons are often combined. Combinations can take one of two forms, && (and) and || (or). When you combine with and, both comparisons must be True for the entire combination to be True. By combining with or, when either of the comparisons are True, the entire combination is True:</p>
+            
+            <h3>Truth Table</h3>
+            <div class="h-divider"></div>
+            <p>True && True   // True and True is True</p>
+            <p>True && False  // True and False is False</p>
+            <p>False && True  // False and True is False</p>
+            <p>False && False // False and False is False</p>
+            <br />
+            <p>True || True   // True or True is True</p>
+            <p>True || False  // True or False is True</p>
+            <p>False || True  // False or True is True</p>
+            <p>False || False // False or False is False</p>
+          </div>
+
+          <!-- table -->
+          <table class="table">
+            <thead class="thead-default">
+              <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Precedence Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">()</th>
+                <td>Expression Grouping</td>
+                <td>19</td>
+              </tr>
+              <tr>
+                <th scope="row">new</th>
+                <td>Create</td>
+                <td>17</td>
+              </tr>
+              <tr>
+                <th scope="row">++</th>
+                <td>Postfix Increment</td>
+                <td>16</td>
+              </tr>
+              <tr>
+                <th scope="row">--</th>
+                <td>Postfix Decrement</td>
+                <td>16</td>
+              </tr>
+              <tr>
+                <th scope="row">!</th>
+                <td>Logical "not"</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <th scope="row">+</th>
+                <td>Unary Plus (value of its operand)</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <th scope="row">-</th>
+                <td>Unary Negation(value of its operand)</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <th scope="row">**, *, /, %</th>
+                <td>Exponentiation, Multiplication, Division, Modulo Division </td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <th scope="row">+, -</th>
+                <td>Addition, Subtraction</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <th scope="row">>, >=, &lt;, &lt;=</th>
+                <td>Comparisons</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <th scope="row">==</th>
+                <td>Equality</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <th scope="row">&amp;&amp;</th>
+                <td>Logical "and"</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <th scope="row">||</th>
+                <td>Logical "or"</td>
+                <td>5</td>
+              </tr>
+            </tbody>
+          </table>
+        <!--/panel--></div>
+        <div class="well text-primary">
+          <a href="http://www.w3schools.com/js/js_arithmetic.asp">Link: Go to w3schools for additional operators and precedence values.</a>
+        </div>
+        
+      <!--/col--></div>
+      <div class="col-sm-6"> 
+        <div class="well-lg">
+          <h2>Practice Questions</h2>
+        </div> 
+        <!--accordian 1 start-->
+        <div class="panel-group" id="accordion">  
+          <!--accordian panel 1-->
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  5 > 4 && False</a> 
+              </h4>  
+            </div>  
+          <div id="collapse1" class="panel-collapse collapse">  
+            <div class="panel-body">
+              <p class="text-primary">
+                Statement 1: 5 > 4 = 
+                <script>
+                  var x = 5; 
+                  var y = 4;
+                  
+                  if (x > y) {
+                      document.write("True");
+                  } else {
+                      document.write("False");
+                  }
+                </script>
+              </p>
+              <p class="text-primary">
+                Statement 2: False
+              </p>
+              <div class="h-divider"></div>
+              <script>
+                var firstStatement = "True"; var secondStatement = "False";
+                  if (firstStatement == secondStatement) {
+                      document.write("Both statement 1 and 2 are True, therefore the answer must be True.");
+                  } else {
+                      document.write("Either statement 1 or statement 2 is False, therefore the answer must be False.");
+                  }
+              </script>
+            </div>  
+          </div>  
+        <!--/end of accordian panel 1--></div>
+        <!--accordian panel 2--> 
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  True && 5 * 2 > 3 + 3 * 2</a> 
+              </h4>  
+            </div>  
+            <div id="collapse2" class="panel-collapse collapse">  
+              <div class="panel-body">
+                <p class="text-primary">Statement 1: True</p>
+                <p>Statement 2: 5 * 2 > 3 + 3 * 2</p>
+                <div class="h-divider"></div>
+                <p>Multiplication comes first: 5 * 2 = 10 and 3 * 2 = 6</p>
+                <p>Statement 2: 10 > 3 + 6</p>
+                <p>Addition comes before the greater than operator: 3 + 6 = 9</p>
+                <p>Statement 2: 10 > 9</p>
+                <p class="text-primary">Statement 2: 
+                <script>
+                  var x = 5 * 2; 
+                  var y = 3 + 3 * 2;
+                  
+                  if (x > y) {
+                    document.write("True");
+                  }
+                  else {
+                    document.write("False");
+                  }
+                </script>
+                </p>
+              <div class="h-divider"></div>
+              <script>
+                var firstStatement = "True"; var secondStatement = "True";
+                  if (firstStatement == secondStatement) {
+                      document.write("Both statement 1 and 2 are True, therefore the answer must be True.");
+                  } else {
+                      document.write("Either statement 1 or statement 2 is False, therefore the answer must be False.");
+                  }
+              </script>
+            </div>  
+          </div>  
+        <!--/end of accordian panel 2--></div>
+        <!--accordian panel 3-->
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  True && 5 * 2 > (3 + 3) * 2</a> 
+              </h4>  
+            </div>  
+            <div id="collapse3" class="panel-collapse collapse">  
+              <div class="panel-body">
+                <p class="text-primary">Statement 1: True</p>
+                <p>Statement 2: 5 * 2 > (3 + 3) * 2</p>
+                <div class="h-divider"></div>
+                <p>Expression groupings comes first: (3 + 3) = 6</p>
+                <p>Statement 2: 5 * 2 > 6 * 2</p>
+                <p>Multiplication comes before the greater than operator: 10 > 12</p>
+                <p>Statement 2: 10 > 12</p>
+                <p class="text-primary">Statement 2: 
+                <script>
+                  var x = 5 * 2; 
+                  var y = (3 + 3) * 2;
+                  
+                  if (x > y) {
+                    document.write("True");
+                  }
+                  else {
+                    document.write("False");
+                  }
+                </script>
+                </p>
+              <div class="h-divider"></div>
+              <script>
+                var firstStatement = "True"; var secondStatement = "False";
+                  if (firstStatement == secondStatement) {
+                      document.write("Both statement 1 and 2 are True, therefore the answer must be True.");
+                  } else {
+                      document.write("Either statement 1 or statement 2 is False, therefore the answer must be False.");
+                  }
+              </script>
+            </div>
+          </div>  
+        <!--/end of accordian panel 3--></div>
+        <!--/end of accordian 1--></div>
+        <br />
+        <div class="well-lg">
+          <h2>Homework Questions</h2>
+        </div>
+        <!--accordian 2 start-->
+        <div class="panel-group" id="accordion2"> 
+        <!--accordian 2 panel 1-->
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse4">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  True && True || False</a> 
+              </h4>  
+            </div>  
+          <div id="collapse4" class="panel-collapse collapse">  
+            <div class="panel-body">
+              <p class="text-primary">
+                Statement 1: True && True is True
+              </p>
+              <p class="text-primary">
+                Statement 2: False
+              </p>
+              <div class="h-divider"></div>
+              <script>
+                var firstStatement = "True"; 
+                var secondStatement = "False";
+
+                if (firstStatement === "True" || secondStatement === "True") {
+                  document.write("If either statement 1 or 2 is True, then the answer is True.");
+                }
+                else {
+                  document.write("Neither statement 1 or 2 is True, so the answer is False.")
+                }
+              </script>
+            </div>  
+          </div> 
+        <!--/end of accordian 2 panel 1--></div>
+        <!--accordian 2 panel 2-->
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse5">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  True && (True || False)</a> 
+              </h4>  
+            </div>  
+            <div id="collapse5" class="panel-collapse collapse">  
+              <div class="panel-body">
+              <p class="text-primary">
+                Statement 1: True
+              </p>
+              <p class="text-primary">
+                Statement 2: (True || False) = True
+              </p>
+              <div class="h-divider"></div>
+              <script>
+                var firstStatement = "True"; 
+                var secondStatement = "True";
+
+                if (firstStatement === "True" && secondStatement === "True") {
+                  document.write("If statement 1 and 2 is True, then the answer is True.");
+                }
+                else {
+                  document.write("If statement 1 and 2 is not True, the answer is False.")
+                }
+              </script>
+            </div> 
+          </div>
+        <!--end of accordian 2 panel 2--></div>
+        <!--accordian 2 panel 3-->
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse6">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  False && False || True</a> 
+              </h4>  
+            </div>  
+            <div id="collapse6" class="panel-collapse collapse">  
+              <div class="panel-body">
+              <p class="text-primary">
+                Statement 1: False && False = False
+              </p>
+              <p class="text-primary">
+                Statement 2: True
+              </p>
+              <div class="h-divider"></div>
+              <script>
+                var firstStatement = "False"; 
+                var secondStatement = "True";
+
+                if (firstStatement === "True" || secondStatement === "True") {
+                  document.write("If either statement 1 or 2 is True, then the answer is True.");
+                }
+                else {
+                  document.write("Neither statement 1 or 2 is True, so the answer is False.")
+                }
+              </script>
+            </div> 
+          </div>
+        <!--end of accordian 2 panel 3--></div>
+        <!--accordian 2 panel 4-->
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse7">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  False && (False || True)</a> 
+              </h4>  
+            </div>  
+            <div id="collapse7" class="panel-collapse collapse">  
+              <div class="panel-body">
+              <p class="text-primary">
+                Statement 1: False
+              </p>
+              <p class="text-primary">
+                Statement 2: (False || True) = True
+              </p>
+              <div class="h-divider"></div>
+              <script>
+                var firstStatement = "False"; 
+                var secondStatement = "True";
+
+                if (firstStatement === "True" && secondStatement === "True") {
+                  document.write("If statement 1 and 2 is True, then the answer is True.");
+                }
+                else {
+                  document.write("If statement 1 and 2 is not True, the answer is False.")
+                }
+              </script>
+            </div> 
+          </div>
+        <!--end of accordian 2 panel 4--></div> 
+        <!--accordian 2 panel 5-->
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse8">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  (False && False) && False && (True || False) || False</a> 
+              </h4>  
+            </div>  
+            <div id="collapse8" class="panel-collapse collapse">  
+              <div class="panel-body">
+              <p>
+                Expression Groupings First: (False && False = False), (True || False = True)
+                <div class="h-divider"></div>
+                False && False && True || False
+                <div class="h-divider"></div>
+                I guess I can do the && in order from left to right and perform the logical "or" last...
+                False && False = False <br />
+                False && True = False <br />
+                False || False = False
+              </p>
+              <div class="h-divider"></div>
+              <script>
+                var firstStatement = "False"; 
+                var secondStatement = "False";
+
+                if (firstStatement === "True" || secondStatement === "True") {
+                  document.write("If statement 1 or 2 is True, then the answer is True.");
+                }
+                else {
+                  document.write("If neither statement 1 or 2 is True, the answer is False.");
+                }
+              </script>
+              <br />
+            </div> 
+          </div>
+        <!--end of accordian 2 panel 5--></div> 
+      <!--end of accordian 2--></div>
+      <!--accordian 3 start-->
+        <div class="panel-group" id="accordion3">  
+          <!--accordian 3 panel 1-->
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion3" href="#collapse9">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  4 == "4"</a> 
+              </h4>  
+            </div>  
+          <div id="collapse9" class="panel-collapse collapse">  
+            <div class="panel-body">
+              <p>True</p>
+            </div>  
+          </div>  
+        <!--/end of accordian 3 panel 1--></div>
+        <!--accordian 3 panel 2--> 
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion3" href="#collapse10">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  4 == "4" || 4 == 4</a> 
+              </h4>  
+            </div>  
+            <div id="collapse10" class="panel-collapse collapse">  
+              <div class="panel-body">
+                <p>True</p>
+            </div>  
+          </div>  
+        <!--/end of accordian 3 panel 2--></div>
+        <!--accordian 3 panel 3-->
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  10 % 3 == 10.0 % 3</a> 
+              </h4>  
+            </div>  
+            <div id="collapse11" class="panel-collapse collapse">  
+              <div class="panel-body">
+                <p>True</p>
+            </div> 
+          </div>  
+        <!--/end of accordian panel 3--></div>
+        <!--accordian 3 panel 4-->
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  10 * (5 / 2.0) == 10.0 * (5 / 2)</a> 
+              </h4>  
+            </div>  
+            <div id="collapse12" class="panel-collapse collapse">  
+              <div class="panel-body">
+                <p>Expression Groupings First: (5 / 2.0 = 2.5), (5 / 2 = 2.5)</p>
+                <p>Multiplication Second: 10 * 2.5 == 10.0 * 2.5</p>
+                <p>25 == 25</p>
+                <p>25 is equal to 25, hence this statement is True.</p>
+            </div> 
+          </div>  
+        <!--/end of accordian panel 4--></div>
+        <!--accordian 3 panel 5-->
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse13">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  10 * 5 / 2 > 10 * (5 / 2)</a> 
+              </h4>  
+            </div>  
+            <div id="collapse13" class="panel-collapse collapse">  
+              <div class="panel-body">
+                <p>Expression Groupings First: (5 / 2 = 2.5)</p>
+                <p>Multiplication Second: 10 * 5 = 50, 10 * 2.5 = 25</p>
+                <p>Divison Third: 50 / 2 = 25</p>
+                <p>25 > 25</p>
+                <p>25 is not greater than 25, hence this statement is False.</p>
+            </div> 
+          </div>  
+        <!--/end of accordian panel 5--></div>
+        <!--accordian 3 panel 6-->
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse14">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  2 * 2 ** 3 == (2 * 2) ** 3</a> 
+              </h4>  
+            </div>  
+            <div id="collapse14" class="panel-collapse collapse">  
+              <div class="panel-body">
+                <p>Expression Groupings First: (2 * 2 = 4)</p>
+                <p>Exponentiation Second: 2 ** 3 = 8, 4 ** 3 = 64</p>
+                <p>Multiplication Third: 2 * 8 = 16</p>
+                <p>16 == 64</p>
+                <p>16 is not equal to 64, hence this statement is False.</p>
+            </div> 
+          </div>  
+        <!--/end of accordian panel 6--></div>
+        <!--accordian 3 panel 7-->
+          <div class="panel panel-default">  
+            <div class="panel-heading">  
+              <h4 class="panel-title"> 
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse15">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="True"></span>
+                  (10 - 4) < +6 || -(2 * -4) > 0</a> 
+              </h4>  
+            </div>  
+            <div id="collapse15" class="panel-collapse collapse">  
+              <div class="panel-body">
+                <p>Expression Groupings First: (10 - 4 = 6), (2 * -4 = -8)</p>
+                <p>Urnary +/- Second: +6, -1 * -8 = 8</p>
+                <p>Comparisons Third: 6 < 6, 8 > 0</p>
+                <p>False || True</p>
+                <p>Since at least one value is true, this statement is True.</p>
+            </div> 
+          </div>  
+        <!--/end of accordian panel 7--></div>
+        <!--/end of accordian 3--></div>
+<!--/col--></div>   
+<!--/row--></div>
+<!--/container--></div>
+
+<footer class="text-center">
+  <p>&copy; 2017 mijitron</p>
+  <ul class="list-unstyled list-inline ">
+    <li><a href="https://www.linkedin.com/in/michellehwang"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+    <li><a href="https://www.instagram.com/miji_tron"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+    <li><a href="snapchatadd.html"><i class="fa fa-snapchat-square fa-2x" aria-hidden="true"></i></a></li>
+  </ul>
+</footer>
+  
+<!-- Placed at the end of the document so the pages load faster -->
+<!--latest jQuery 1x-->   
+<script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>   
+<!--Bootstrap-->   
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+</body>  
+</html> 
