@@ -204,7 +204,7 @@ border-top:1px solid lightgray;
                   5 > 4 && False</a> 
               </h4>  
             </div>  
-          <div id="collapse1" class="panel-collapse collapse">  
+          <div id="collapse1" class="panel-collapse">  
             <div class="panel-body">
               <p class="text-primary">
                 Statement 1: 5 > 4 = 
@@ -243,7 +243,7 @@ border-top:1px solid lightgray;
                   True && 5 * 2 > 3 + 3 * 2</a> 
               </h4>  
             </div>  
-            <div id="collapse2" class="panel-collapse collapse">  
+            <div id="collapse2" class="panel-collapse">  
               <div class="panel-body">
                 <p class="text-primary">Statement 1: True</p>
                 <p>Statement 2: 5 * 2 > 3 + 3 * 2</p>
@@ -286,7 +286,7 @@ border-top:1px solid lightgray;
                   True && 5 * 2 > (3 + 3) * 2</a> 
               </h4>  
             </div>  
-            <div id="collapse3" class="panel-collapse collapse">  
+            <div id="collapse3" class="panel-collapse">  
               <div class="panel-body">
                 <p class="text-primary">Statement 1: True</p>
                 <p>Statement 2: 5 * 2 > (3 + 3) * 2</p>
@@ -336,7 +336,7 @@ border-top:1px solid lightgray;
                   True && True || False</a> 
               </h4>  
             </div>  
-          <div id="collapse4" class="panel-collapse collapse">  
+          <div id="collapse4" class="panel-collapse">  
             <div class="panel-body">
               <p class="text-primary">
                 Statement 1: True && True is True
@@ -368,7 +368,7 @@ border-top:1px solid lightgray;
                   True && (True || False)</a> 
               </h4>  
             </div>  
-            <div id="collapse5" class="panel-collapse collapse">  
+            <div id="collapse5" class="panel-collapse">  
               <div class="panel-body">
               <p class="text-primary">
                 Statement 1: True
@@ -400,7 +400,7 @@ border-top:1px solid lightgray;
                   False && False || True</a> 
               </h4>  
             </div>  
-            <div id="collapse6" class="panel-collapse collapse">  
+            <div id="collapse6" class="panel-collapse">  
               <div class="panel-body">
               <p class="text-primary">
                 Statement 1: False && False = False
@@ -432,7 +432,7 @@ border-top:1px solid lightgray;
                   False && (False || True)</a> 
               </h4>  
             </div>  
-            <div id="collapse7" class="panel-collapse collapse">  
+            <div id="collapse7" class="panel-collapse">  
               <div class="panel-body">
               <p class="text-primary">
                 Statement 1: False
@@ -464,7 +464,7 @@ border-top:1px solid lightgray;
                   (False && False) && False && (True || False) || False</a> 
               </h4>  
             </div>  
-            <div id="collapse8" class="panel-collapse collapse">  
+            <div id="collapse8" class="panel-collapse">  
               <div class="panel-body">
               <p>
                 Expression Groupings First: (False && False = False), (True || False = True)
@@ -504,7 +504,7 @@ border-top:1px solid lightgray;
                   4 == "4"</a> 
               </h4>  
             </div>  
-          <div id="collapse9" class="panel-collapse collapse">  
+          <div id="collapse9" class="panel-collapse">  
             <div class="panel-body">
               <p>True</p>
             </div>  
@@ -519,7 +519,7 @@ border-top:1px solid lightgray;
                   4 == "4" || 4 == 4</a> 
               </h4>  
             </div>  
-            <div id="collapse10" class="panel-collapse collapse">  
+            <div id="collapse10" class="panel-collapse">  
               <div class="panel-body">
                 <p>True</p>
             </div>  
@@ -534,7 +534,7 @@ border-top:1px solid lightgray;
                   10 % 3 == 10.0 % 3</a> 
               </h4>  
             </div>  
-            <div id="collapse11" class="panel-collapse collapse">  
+            <div id="collapse11" class="panel-collapse">  
               <div class="panel-body">
                 <p>True</p>
             </div> 
@@ -549,7 +549,7 @@ border-top:1px solid lightgray;
                   10 * (5 / 2.0) == 10.0 * (5 / 2)</a> 
               </h4>  
             </div>  
-            <div id="collapse12" class="panel-collapse collapse">  
+            <div id="collapse12" class="panel-collapse">  
               <div class="panel-body">
                 <p>Expression Groupings First: (5 / 2.0 = 2.5), (5 / 2 = 2.5)</p>
                 <p>Multiplication Second: 10 * 2.5 == 10.0 * 2.5</p>
@@ -567,7 +567,7 @@ border-top:1px solid lightgray;
                   10 * 5 / 2 > 10 * (5 / 2)</a> 
               </h4>  
             </div>  
-            <div id="collapse13" class="panel-collapse collapse">  
+            <div id="collapse13" class="panel-collapse">  
               <div class="panel-body">
                 <p>Expression Groupings First: (5 / 2 = 2.5)</p>
                 <p>Multiplication Second: 10 * 5 = 50, 10 * 2.5 = 25</p>
@@ -586,7 +586,7 @@ border-top:1px solid lightgray;
                   2 * 2 ** 3 == (2 * 2) ** 3</a> 
               </h4>  
             </div>  
-            <div id="collapse14" class="panel-collapse collapse">  
+            <div id="collapse14" class="panel-collapse">  
               <div class="panel-body">
                 <p>Expression Groupings First: (2 * 2 = 4)</p>
                 <p>Exponentiation Second: 2 ** 3 = 8, 4 ** 3 = 64</p>
@@ -605,7 +605,7 @@ border-top:1px solid lightgray;
                   (10 - 4) < +6 || -(2 * -4) > 0</a> 
               </h4>  
             </div>  
-            <div id="collapse15" class="panel-collapse collapse">  
+            <div id="collapse15" class="panel-collapse">  
               <div class="panel-body">
                 <p>Expression Groupings First: (10 - 4 = 6), (2 * -4 = -8)</p>
                 <p>Urnary +/- Second: +6, -1 * -8 = 8</p>
